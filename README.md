@@ -29,7 +29,7 @@ If your project has the following property in the real world system, then MMS co
 For the request of free alpha version download and more details of application, please contact the following:
 MMS@csl.sony.co.jp
 
-We are looking forward to your participation in our future open-source community with megadiverse stakeholders.
+We are looking forward to your participation in our future open-source community with megadiverse stakeholders.
 
 Sony CSL
 Masa FUNABASHI & MMS team
