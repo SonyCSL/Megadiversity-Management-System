@@ -1,0 +1,10 @@
+{
+  "private": "true",
+  "version": "1.0.0",
+  "devDependencies": {
+    "prettier": "^1.11.0"
+  },
+  "scripts": {
+    "format": "prettier --write ./artichoke/framework/views/css/artichoke.css"
+  }
+}

@@ -1,0 +1,18 @@
+use \artichoke\framework\core\Requests;
+use \artichoke\framework\core\Server;
+use \artichoke\framework\core\Session;
+use \artichoke\framework\core\Configurator;
+
+class IndexController extends \artichoke\framework\abstracts\ControllerBase
+{
+    public function indexAction(array $args = [])
+    {
+        $configurator = new Configurator();
+        $app_name = $configurator->read('app_dir');
+        $this->set('helo', "HELLO WORLD");
+        $this->set('app_name', $app_name);
+        $this->set('controller_name', get_class());
+        $this->set('controller_dir', __DIR__);
+        $this->set('html_dir', $configurator->read('system_root').'/artichoke/'.$app_name.'/views/template/index.html');
+    }
+}

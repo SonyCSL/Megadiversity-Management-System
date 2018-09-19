@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- Copyright 2018 Sony Computer Science Laboratories, Inc. -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Artichoke</title>
+</head>
+
+<body>
+<div class="container-fluid">
+
+  {Bind$_navigation.html}
+
+  <div class="row">
+
+    <div class="col-md-9">
+      <h1><img src="favicon.png" width="50" height="50" alt="hello">Welcome to Artichoke</h1>
+      <p class="blue">
+        <em> Congrats! You've successfully installed <span class="green">Artichoke</span> on your server.</em>
+      </p>
+      <h2>The next step is to make your own application.</h2>
+      <p class="gray">
+        We'll help you to build your application that shows HELLO WORLD.<br>
+        Please fill out the config forms set forth below.
+      </p>
+      <br>
+      {Switch$failedMes}<div class="alert alert-warning" role="alert">{$$failedMes}</div>{/Switch}
+      <form action="index/exec" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+        <div class="form-group">
+          <legend>Application</legend>
+          <label for="app_name">Your application name *</label>
+          <input type="text" class="form-control" id="app_name" name="app_name" placeholder="ex. myapp" value="app">
+          <small id="app_name_help" class="form-text text-muted">This name will be used at app directory and php's namespace.</small>
+          <br><br>
+          <label for="app_fqdn">Your host.domain (FQDN) *</label>
+          <input type="text" class="form-control" id="app_fqdn" name="app_fqdn" placeholder="yourapp.example.com" value="{MyFQDN$}">
+          <small id="app_fqdn_help" class="form-text text-muted">You don't have to alter this value in most cases.</small>
+        </div>
+        <br>
+        <fieldset class="form-group">
+          <legend>Options</legend>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="check_default" disabled checked> Set as default application
+            </label>
+            <br>
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="check_api"> Enable API
+            </label>
+            <br>
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="check_auth"> Enable user authentication
+            </label>
+            <br>
+          </div>
+        </fieldset>
+        <br>
+        <button type="submit" class="btn btn-primary">Build & Run application</button>
+      </form>
+    </div>
+
+  </div>
+
+  {Bind$_copyright.html}
+
+</div>
+</body>
+</html>

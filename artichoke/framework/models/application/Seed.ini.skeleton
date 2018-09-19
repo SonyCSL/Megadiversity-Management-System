@@ -1,0 +1,36 @@
+api_controller = "ApiController"
+auth_controller = "LoginController"
+auth_user_model = "\\artichoke\\framework\\models\\client\\User"
+
+[OS]
+sudoers_passwd = ""
+admin_users = ""
+
+[HTML_OPTION]
+title_prefix = ""
+title_suffix = ""
+
+[DATABASE_SELECT]
+dynamicdb = "MongoDB"
+staticdb = "MariaDB"
+
+[MONGODB_INFO]
+host = "127.0.0.1"
+username = ""
+passwd = ""
+dbname = ""
+port = 27017
+
+[MARIADB_INFO]
+host = "127.0.0.1"
+username = ""
+passwd = ""
+dbname = ""
+port = 3306
+
+[SQLITE_INFO]
+host = ""
+username = ""
+passwd = ""
+dbname = ""
+port =

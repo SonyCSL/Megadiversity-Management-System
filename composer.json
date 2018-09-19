@@ -1,0 +1,27 @@
+{
+    "name": "mms/artichoke",
+    "description": "Web application framework for Megadiversity management system.",
+    "type": "project",
+    "require": {
+        "mongodb/mongodb": "^1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "friendsofphp/php-cs-fixer": "^2.10"
+    },
+    "authors": [
+        {
+            "name": "Sony Computer Science Laboratory",
+            "email": "info@synecoculture.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "artichoke\\" : "artichoke/" 
+        }
+    },
+    "scripts": {
+        "php-format": "php-cs-fixer fix .",
+        "php-cov": "php -dzend_extension=xdebug.so ./vendor/bin/phpunit"
+    }
+}

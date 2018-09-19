@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Copyright 2018 Sony Computer Science Laboratories, Inc. -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>I'm your first app!</title>
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #336699;">
+    <div class="container-fluid">
+      <header class="navbar-header">
+        <a href="{RootURL$}" class="navbar-brand">
+          <img src="favicon.png" width="24" height="24" alt="{$$app_name}">{$$app_name}
+        </a>
+      </header>
+    </div>
+  </nav>
+
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <h1>{$$helo}</h1>
+        <p class="blue">
+          <i> Well-done! We've successfully built your application '<span class="green">{$$app_name}</span>' .</i>
+        </p>
+      <h2>How to grow your application?</h2>
+      <h3>1. Edit only Controllers</h3>
+        <p>
+          <span class="blue">
+            This is <i class="red">index</i> page - <i>{RootURL$}</i>.<br>
+            ({RootURL$}index is redirect to {RootURL$})<br>
+          </span>
+          This page is controlled by PHP Class named <i class="red">{$$controller_name}</i>.<br>
+          And the class file is placed at <i class="red">{$$controller_dir}</i>.<br>
+          Try open the file and insert <code>echo "foo!bar!";</code> in the class method "indexAction".
+        </p>
+      <h3>2. Edit Views & Controllers</h3>
+        <p>
+          The HTML template of this page is placed at <i class="red">{$$html_dir}</i>.<br>
+          You can use <a href="https://jquery.com/" target="_blank">jQuery</a> and <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> codes on this HTML template for designing.<br>
+          (JavaScript and CSS files are bundled and included automatically in Artichoke)<br>
+          <br>
+          Application variables are handled in the following way:<br>
+          if you write like <code>$this->set('var', "foobarbaz");</code> on IndexController.php,<br>
+          then "<span class="red">{\\var}</span>" on index.html will be replaced by "<span class="red">foobarbaz</span>".<br>
+          <br>
+          Example of this page:<br>
+          <img src="resources/1.png" style="vertical-align:top;border:1px solid #FFF;"> - IndexController.php<br>
+          <img src="resources/2.png" style="vertical-align:top;border:1px solid #FFF;"> - index.html<br>
+        </p>
+      <h3>3. Add Models</h3>
+        <p>
+          <i class="blue">To be added..</i>
+        </p>
+    </div>
+
+  </div>
+
+  <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark" style="background-color: #336699;">
+    <div class="container-fluid">
+      <footer class="navbar-text">© Sony Computer Science Laboratories, Inc.</footer>
+    </div>
+  </nav>
+
+</div>
+</body>
+</html>

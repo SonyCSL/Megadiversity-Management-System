@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/7.2/phpunit.xsd"
+         backupGlobals="false"
+         colors="true"
+         bootstrap="vendor/autoload.php"
+         beStrictAboutCoversAnnotation="true"
+>
+
+    <testsuites>
+        <testsuite name="syneco-cms Test Suite">
+            <directory>tests/framework/abstracts/</directory>
+            <directory>tests/framework/core/</directory>
+			<directory>tests/framework/util/</directory>
+            <directory>tests/framework/models/</directory>
+            <directory>tests/framework/controllers/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./artichoke</directory>
+            <exclude>
+              <directory>tests/framework/core/</directory>
+              <directory>vendor/</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
+    <logging>
+      <log type="junit" target="./testlog/unittest_result.xml"/>
+      <log type="coverage-clover" target="./testlog/coverage.xml"/>
+      <log type="coverage-html" target="./testlog/report" highLowerBound="85"/>
+    </logging>
+
+    <php>
+        <var name="MARIADB_HOST" value="127.0.0.1" />
+        <var name="MARIADB_PORT" value="3306" />
+        <var name="MARIADB_USER" value="root" />
+        <var name="MARIADB_PASSWD" value="" />
+        <var name="MARIADB_DBNAME" value="MMSTEST" />
+        <var name="MONGODB_HOST" value="127.0.0.1" />
+        <var name="MONGODB_PORT" value="27017" />
+        <var name="MONGODB_USER" value="egg" />
+        <var name="MONGODB_PASSWD" value="raw1sBest" />
+        <var name="MONGODB_DBNAME" value="MMSTEST" />
+    </php>
+</phpunit>
